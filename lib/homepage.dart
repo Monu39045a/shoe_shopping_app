@@ -66,10 +66,8 @@ class _HomePageState extends State<HomePage> {
                         horizontal: 16, vertical: 10),
                     child: GestureDetector(
                       onTap: () {
-                        // print("hi");
                         setState(() {
                           selectedFilter = filter;
-                          // print(filter);
                         });
                       },
                       child: Chip(
@@ -91,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                   );
                 },
               ),
-            ),
+            )
           ],
         ),
       ),
