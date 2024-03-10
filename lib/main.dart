@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:google_fonts/google_fonts.dart';
 import 'package:shoe_app/homepage.dart';
 
 void main() {
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Shoe App",
       theme: ThemeData(
-        fontFamily: "Lato",
+        // fontFamily: GoogleFonts.lato().fontFamily,
+        fontFamily: 'Lato',
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color.fromRGBO(254, 204, 1, 1),
           primary: const Color.fromRGBO(254, 204, 1, 1),

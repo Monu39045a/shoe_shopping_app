@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                         // print("hi");
                         setState(() {
                           selectedFilter = filter;
-                          print(filter);
+                          // print(filter);
                         });
                       },
                       child: Chip(
@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                   );
                 },
               ),
-            )
+            ),
           ],
         ),
       ),
