@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shoe_app/cart_provider.dart';
 // import 'package:shoe_app/global_variables.dart';
 
 class ProductDetailPage extends StatefulWidget {
@@ -10,6 +12,33 @@ class ProductDetailPage extends StatefulWidget {
 
 class _ProductDetailPageState extends State<ProductDetailPage> {
   int selectedSize = 0;
+
+  void onTap() {
+    if (selectedSize != 0) {
+      Provider.of<CartProvider>(context, listen: false).addProduct(
+        {
+          'id': widget.product['id'],
+          'title': widget.product['title'],
+          'price': widget.product['price'],
+          'imageUrl': widget.product['imageUrl'],
+          'company': widget.product['company'],
+          'size': selectedSize,
+        },
+      );
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text("Item added Sucessfully"),
+        ),
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text("Please select the size"),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,7 +117,13 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
 
                   // Issue needs to be solved -- solved
                   child: ElevatedButton.icon(
-                    onPressed: () {},
+                    onPressed: onTap,
+
+                    // TAKE THIS PART OUT OF THE BUILD WIDGET
+                    // onPressed: () {
+                    //   Provider.of<CartProvider>(context, listen: false)
+                    //       .addProduct(widget.product);
+                    // },
                     icon: const Icon(
                       Icons.shopping_cart,
                       color: Color.fromARGB(255, 14, 12, 12),

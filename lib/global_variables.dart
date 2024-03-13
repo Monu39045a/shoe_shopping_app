@@ -33,13 +33,13 @@ final products = [
   },
 ];
 
-final cart = [
-  {
-    'id': '3',
-    'title': 'Air Jordan Shoes',
-    'price': 420.69,
-    'imageUrl': 'assests/shoes-images/shoes_4.png',
-    'company': "Nike",
-    'size': 9,
-  },
-];
+// final cart = [
+//   // {
+//   //   'id': '3',
+//   //   'title': 'Air Jordan Shoes',
+//   //   'price': 420.69,
+//   //   'imageUrl': 'assests/shoes-images/shoes_4.png',
+//   //   'company': "Nike",
+//   //   'size': 9,
+//   // },
+// ];
