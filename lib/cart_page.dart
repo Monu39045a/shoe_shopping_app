@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shoe_app/cart_provider.dart';
-import 'package:shoe_app/global_variables.dart';
+// import 'package:shoe_app/global_variables.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});

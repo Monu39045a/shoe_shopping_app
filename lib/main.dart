@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => CartProvider(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: "Shoe App",
         theme: ThemeData(
-          // fontFamily: GoogleFonts.lato().fontFamily,
           fontFamily: 'Lato',
           colorScheme: ColorScheme.fromSeed(
             seedColor: const Color.fromRGBO(254, 204, 1, 1),
@@ -31,7 +31,6 @@ class MyApp extends StatelessWidget {
             titleMedium: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             bodySmall: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
           ),
-
           appBarTheme: const AppBarTheme(
             centerTitle: true,
             titleTextStyle: TextStyle(
